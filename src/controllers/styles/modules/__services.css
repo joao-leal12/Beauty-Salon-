@@ -1,0 +1,71 @@
+#services {
+    padding-block: 8rem;  
+    background-color: #f9f9f9; 
+}
+
+#services .services__content .services__content__title{ 
+
+    font-size: 3rem; 
+    line-height: 4.5rem; 
+    
+    text-align: left; 
+
+    margin-bottom: 1.6rem; 
+
+} 
+
+#services .services__content .services__content__paragraph{ 
+
+    font: normal 400 1.6rem/  2.6rem 'DM Sans'; 
+    text-align: left; 
+}
+
+
+#services .services__content .services__content__paragraph strong{ 
+
+   color: #FFA724; 
+} 
+
+#services .services__cards{ 
+    padding-top: 6.4rem; 
+   }
+
+#services .services__wrapper__content{ 
+    display: flex ;
+    flex-direction: column; 
+    gap: 2.4rem; 
+}   
+
+#services .services__cards__card{ 
+
+    box-shadow: 0px 0px 12px 0px #00000014;
+    border-radius: 1.2rem;     
+    border-bottom: 4px solid #FFA724; 
+
+   
+    padding-inline: 3.2rem; 
+    padding-block: 6rem; 
+    display: flex; 
+    flex-flow: nowrap column ; 
+    align-items:center; 
+    justify-content: center; 
+} 
+ 
+
+
+
+ 
+#services .services__cards__card .services__card__title{ 
+
+    font: normal 700 2.4rem/3.6rem 'Poppins'; 
+    margin-top: 2.4rem; 
+    margin-bottom: 1.2rem; 
+}
+
+#services .services__cards__card .services__card__paragraph{ 
+
+    font: normal 400 1.6rem/2.6rem 'DM Sans';  
+    text-align: center; 
+    color:#767676 ; 
+    
+}

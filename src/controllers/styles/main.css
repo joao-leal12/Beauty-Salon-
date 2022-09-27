@@ -1,0 +1,9 @@
+@import './resets/_resets.css';  
+@import './infor-aplications/_infor-aplications.css'; 
+@import './modules/__menu.css'; 
+@import './modules/__CallToAction.css'; 
+@import './modules/__about.css';
+@import './modules/__services.css'; 
+@import './modules/__depositions.css';  
+@import './modules/__contact.css'; 
+@import './modules/__footer.css'; 

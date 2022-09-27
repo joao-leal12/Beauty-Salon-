@@ -1,0 +1,35 @@
+
+html{ 
+
+    font-size: 62.5%; 
+}
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}  
+*::after,
+*::before{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}  
+ 
+ul{ 
+    list-style: none;
+} 
+
+a{ 
+    text-decoration:none; 
+} 
+
+button{ 
+    
+    border: none; 
+    background-color: transparent; 
+    outline: none;   
+
+}
+ 

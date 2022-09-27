@@ -1,0 +1,57 @@
+#depositions{ 
+
+    padding-block: 8rem; 
+}
+
+#depositions .depositions__title{ 
+
+    font:normal 700 3rem/4.5rem 'Poppins';  
+    padding-right: 7rem; 
+    text-align: left;  
+    margin-bottom: 6rem; 
+} 
+
+#depositions .depositions__comments{ 
+
+    padding: 2.8rem 3.2rem;  
+    display: flex;  
+    gap: 5.7rem; 
+} 
+
+
+#depositions .depositions__comments__comment {
+
+
+ flex-shrink: 0;  
+  width: 100%; 
+
+   
+}
+
+#depositions .depositions__comments__paragraph{ 
+
+    font: normal 400 1.6rem/2.6rem 'Poppins';  
+    margin-bottom: 1.6rem; 
+    text-align: left; 
+}
+ 
+
+
+#depotions  .depositions__comments__paragraph .custom-span{ 
+
+    font-family: 'icomoon';
+
+} 
+
+
+#depositions .depositions__comments__author{ 
+
+    display: flex;  
+    align-items: center;  
+    gap: .8rem;     
+}
+
+#depositions .depositions__comments__author img{ 
+    max-width: 3.2rem; 
+    height: 3.2rem; 
+}

@@ -1,0 +1,62 @@
+
+
+#calltoAction .call__wrapper-img{  
+    position: relative; 
+
+}
+ 
+
+#calltoAction .call__wrapper-img::before{ 
+
+    content: ''; 
+
+    width: 89%;
+    height: 100%;  
+
+    position: absolute; 
+    right: 0;   
+
+    background-color: #FFA724; 
+}
+
+
+#calltoAction .wrapper-img__container{ 
+    
+    width: 89%;  
+    
+    position:relative;
+    top: 4rem ;     
+}
+ 
+#calltoAction .call__content{ 
+   
+    margin-top: 4.7rem; 
+}
+
+#calltoAction .call__content h2{ 
+
+    font-size: 3rem; 
+    line-height: 4.5rem; 
+    text-align: center;  
+    
+    margin-bottom: 1.6rem; 
+
+} 
+
+#calltoAction .call__content p{ 
+  
+     font: normal 400 1.6rem/2.083rem 'DM Sans';  
+    text-align:center;  
+
+    color: #767676; 
+
+    margin-bottom: 3.2rem; 
+
+    padding-inline: 1.4rem; 
+} 
+
+
+body.menu-expand #calltoAction{ 
+
+    opacity: 0; 
+}

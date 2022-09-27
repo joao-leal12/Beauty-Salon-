@@ -1,0 +1,31 @@
+footer{ 
+
+    padding: 6.4rem 2.4rem;  
+    background-color:#FFA724 ; 
+    display: flex ;
+    
+
+}  
+
+footer .wrapper{ 
+    margin: 0; 
+}
+
+footer p{ 
+    text-align: left; 
+    line-height: 2.7rem; 
+}
+ 
+
+footer ul { 
+
+    margin-top: 3.2rem; 
+}
+footer .footer__social__links{ 
+
+    display: flex; 
+    gap: 3.2rem;  
+
+
+
+}
