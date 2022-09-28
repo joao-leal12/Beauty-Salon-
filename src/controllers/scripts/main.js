@@ -4,6 +4,3 @@ import {cards} from '../scripts/modulesJs/createEl.mjs';
 
 ActionsMenu(cards) 
 
-
-
-

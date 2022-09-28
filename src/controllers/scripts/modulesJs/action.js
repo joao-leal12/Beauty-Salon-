@@ -6,7 +6,8 @@ export function ActionsMenu(cards){
     ActiveMenuOnClick(); 
     closeMenuOnClick() ; 
     CreateElement(cards);   
-    onScroll();  
+    onScroll();   
+
 } 
 
 
@@ -47,9 +48,60 @@ function CloseMenu(){
 function onScroll(){  
 
     changeStyleNavonScroll()
-    window.addEventListener('scroll',changeStyleNavonScroll )
- 
+    window.addEventListener('scroll',() => { 
+
+        changeStyleNavonScroll()
+        changedStyleLinkonScroll(about); 
+        changedStyleLinkonScroll(services); 
+
+       
+    } )
+    
 }
+
+function dataActiveMenu(Container){ 
+
+    
+    return { 
+        
+      targetLine : window.innerHeight / 2 + scrollY, 
+      top: Container.offsetTop, 
+      bottom: Container.offsetTop + Container.offsetHeight  
+    }
+
+
+}
+
+function changedStyleLinkonScroll(section) {  
+
+    let data = dataActiveMenu(section) 
+
+    const {targetLine, top, bottom} = data; 
+    const {id} = section; 
+    
+    
+
+     if(targetLine >= top && targetLine < bottom){ 
+
+         document.querySelector(`a[href="${"#" + id}"]`).classList.add('active');
+
+     }else if(targetLine > bottom){ 
+
+         document.querySelector(`a[href="${"#" + id}"]`).classList.remove('active');
+
+     }else { 
+
+         document.querySelector(`a[href="${"#" + id}"]`).classList.remove('active')
+     }
+
+
+
+
+
+}
+
+
+
 
 
 function changeStyleNavonScroll(){ 

@@ -15,7 +15,6 @@
 }
 
 
-
 #nav .nav__close{ 
     display: none; 
 } 
@@ -142,17 +141,20 @@ body.menu-expand #nav .nav__open{
 }
 
 
-.nav__link.active{ 
+body.menu-expand #nav .nav__list .nav__link.active{ 
 
-    color: white; 
+    color: #FFA724; 
+    padding-bottom: 1.8rem; 
 
 
 }  
 
 
-.nav__link::before.active{ 
+body.menu-expand #nav .nav__list .nav__link.active::before{ 
 
-    background: #fff; 
+    width: 100%; 
+
+
 
 }
 
