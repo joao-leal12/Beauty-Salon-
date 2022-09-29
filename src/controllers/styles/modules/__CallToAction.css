@@ -59,4 +59,29 @@
 body.menu-expand #calltoAction{ 
 
     opacity: 0; 
+} 
+
+
+@media screen{ 
+
+    @media(min-width: 1100px){ 
+       
+
+
+        #calltoAction .wrapper{ 
+            display: flex;  
+            align-items:center; 
+            overflow: visible; 
+        } 
+
+        #calltoAction .call__wrapper-img{
+
+            order: 2;  
+            position: relative;
+            left: 5.2rem; 
+
+        }
+
+    }
+
 }

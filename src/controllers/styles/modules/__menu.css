@@ -2,7 +2,8 @@
 #nav { 
     position: fixed; 
     width: 100%; 
-    z-index: 100; 
+    z-index: 100;
+    
 }
 
 #nav .nav__wrapper{ 
@@ -157,5 +158,100 @@ body.menu-expand #nav .nav__list .nav__link.active::before{
 
 
 }
+ 
 
 
+
+@media screen{ 
+
+    @media(min-width: 1100px){ 
+       
+        
+        #nav .nav__list{ 
+            position: static;  
+            display: flex; 
+            opacity: 1;  
+            height: auto;    
+            transform: translateX(0); 
+            gap: 3.2rem;    
+           
+        
+        } 
+
+        #nav .nav__list .nav__link { 
+            font: normal 700 1.4rem/2.083rem 'DM Sans';  
+            color: #30220E;  
+            position:relative; 
+        }
+        
+    
+        #nav .nav__open,
+        #nav .nav__close{ 
+
+            display: none; 
+        }
+    
+    
+    
+    
+        
+        #nav .nav__list  .nav__link::before{ 
+            
+            content: ''; 
+            position: absolute;  
+            bottom: 0; 
+
+            width: 0; 
+            
+            height: 3px; 
+            
+            background-color: #FFA724; 
+            
+            transition: width 300ms; 
+
+        } 
+
+        #nav .nav__list .nav__link:hover{ 
+
+            color: #FFA724; 
+            padding-bottom: 1.8rem
+        
+        
+        }
+
+        #nav .nav__list  .nav__link:hover::before { 
+
+             width: 100%;  
+             
+
+        }
+            
+    
+
+        #nav .nav__list .nav__link.active{ 
+
+            color: #fff; 
+            padding-bottom: 1.8rem;  
+            transition: color 300ms; 
+            
+            
+        }  
+        
+        
+         #nav .nav__list .nav__link.active::before{ 
+        
+            width: 100%; 
+            background-color: #fff; 
+        
+        
+        
+        }
+
+
+
+
+    } 
+
+        
+    
+}
