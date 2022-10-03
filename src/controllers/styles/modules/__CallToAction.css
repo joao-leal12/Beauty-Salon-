@@ -65,7 +65,9 @@ body.menu-expand #calltoAction{
 @media screen{ 
 
     @media(min-width: 1100px){ 
-       
+       #calltoAction{ 
+          margin-bottom: 10.8rem; 
+       }
 
 
         #calltoAction .wrapper{ 
@@ -79,6 +81,38 @@ body.menu-expand #calltoAction{
             order: 2;  
             position: relative;
             left: 5.2rem; 
+
+        } 
+
+        #calltoAction .call__content .wrapper-content{ 
+            display: flex;
+            flex-direction: column; 
+
+
+        }
+
+        #calltoAction .call__content .wrapper-content h2, 
+        #calltoAction .call__content .wrapper-content p
+        { 
+
+            text-align: left; 
+
+        } 
+        #calltoAction .call__content .wrapper-content h2{ 
+            font-size: 3.6rem; 
+            line-height: 5.4rem; 
+            margin-bottom: 1.2rem; 
+        }
+        #calltoAction .call__content .wrapper-content p{ 
+            font-size: 1.8rem; 
+            line-height: 2.344rem; 
+            margin-bottom: 2.4rem; 
+            padding: 0; 
+
+        }
+
+        #calltoAction .call__content .wrapper-content button{ 
+            width: fit-content; 
 
         }
 

@@ -178,6 +178,12 @@ body.menu-expand #nav .nav__list .nav__link.active::before{
         
         } 
 
+        #nav .nav__wrapper{ 
+
+            padding-inline: 12.3rem; 
+
+        }
+
         #nav .nav__list .nav__link { 
             font: normal 700 1.4rem/2.083rem 'DM Sans';  
             color: #30220E;  
