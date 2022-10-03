@@ -65,3 +65,25 @@
 }
 
     
+
+@media only screen and (min-width: 1100px){ 
+
+    #contact { 
+        padding-block: 16rem; 
+
+    } 
+
+    #contact .content{ 
+        display: flex; 
+        flex-direction: row ; 
+        justify-content: space-around ;  
+    }
+      
+
+    #contact .contact__infor-address{ 
+
+        max-width: 40.4rem;  
+
+    }
+
+}

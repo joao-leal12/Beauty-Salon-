@@ -68,4 +68,57 @@
     text-align: center; 
     color:#767676 ; 
     
+} 
+
+
+@media only screen and  (min-width: 1100px){ 
+    #services{ 
+        padding-block: 16rem; 
+    }
+    #services .services__content .services__content__title{ 
+
+        font-size: 3.6rem; 
+        line-height: 5.4rem; 
+        
+        text-align: center; 
+    
+        margin-bottom: 1.2rem;  
+
+
+    
+    } 
+
+    #services .services__content .services__content__paragraph{ 
+
+        max-width: 53rem;  
+        margin: 0 auto;      
+        text-align: center; 
+        font: normal 400 1.8rem/2.34rem 'DM Sans';  
+    } 
+    
+    #services .wrapper-content{ 
+
+        padding: 0; 
+    }
+    #services .services__cards .services__wrapper__content{ 
+        display: flex; 
+        flex-direction: row; 
+        gap: 3.2rem; 
+    }
+
+    #services .services__cards__card{ 
+
+        box-shadow: 0px 0px 12px 0px #00000014;
+        border-radius: 1.2rem;     
+        border-bottom: 4px solid #FFA724; 
+    
+       
+        padding: 5.8rem 4.8rem; 
+        display: flex; 
+        flex-flow: nowrap column ; 
+        align-items:center; 
+        justify-content: center; 
+    } 
+     
+    
 }

@@ -20,12 +20,11 @@
 
 
 #depositions .depositions__comments__comment {
+    
+    flex-shrink: 0;  
+    width: 100%;  
 
-
- flex-shrink: 0;  
-  width: 100%; 
-
-   
+    box-shadow: 0px 0px 12px 0px #00000014;
 }
 
 #depositions .depositions__comments__paragraph{ 
@@ -54,4 +53,45 @@
 #depositions .depositions__comments__author img{ 
     max-width: 3.2rem; 
     height: 3.2rem; 
+} 
+
+
+@media only screen and (min-width: 1100px){ 
+   
+
+    #depositions .depositions__title{ 
+
+        font:normal 700 3.6rem/4.5rem 'Poppins';  
+        padding-right: 0;
+        text-align: center;  
+        margin-bottom: 6rem;  
+        max-width: 48.1rem;  
+        margin: 0 auto ; 
+    } 
+
+   
+    #depositions .depositions__comments{ 
+
+        padding: 2.8rem 3.2rem;  
+        display: flex;  
+        gap: 3.2rem;  
+
+        
+
+
+
+    } 
+    
+   
+    #depositions .depositions__comments__comment {
+    
+        flex-shrink: 1;   
+        padding: 5.2rem; 
+        width: 100%;  
+   
+      
+    }
+    
+
+
 }

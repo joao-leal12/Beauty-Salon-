@@ -51,8 +51,14 @@ function onScroll(){
     window.addEventListener('scroll',() => { 
 
         changeStyleNavonScroll()
+        changedStyleLinkonScroll(calltoAction); 
         changedStyleLinkonScroll(about); 
         changedStyleLinkonScroll(services); 
+        changedStyleLinkonScroll(depositions); 
+        changedStyleLinkonScroll(contact); 
+        
+        
+        
 
        
     } )
