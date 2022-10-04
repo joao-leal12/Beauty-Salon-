@@ -242,12 +242,36 @@ body.menu-expand #nav .nav__list .nav__link.active::before{
             
             
         }  
+
+       
         
         
          #nav .nav__list .nav__link.active::before{ 
         
             width: 100%; 
             background-color: #fff; 
+        
+        
+        
+        }
+
+
+        #nav .nav__list .nav__link.activeTwo{ 
+
+            color: #FFA724; 
+            padding-bottom: 1.8rem;  
+            transition: color 300ms; 
+            
+            
+        }  
+
+       
+        
+        
+         #nav .nav__list .nav__link.activeTwo::before{ 
+        
+            width: 100%; 
+            background-color: #FFA724; 
         
         
         

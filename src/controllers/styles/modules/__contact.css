@@ -76,10 +76,16 @@
     #contact .content{ 
         display: flex; 
         flex-direction: row ; 
-        justify-content: space-around ;  
+        justify-content: flex-start;    
+        gap: 26.8rem; 
+       
     }
       
+    #contact .wrapper{ 
 
+        padding-inline: 12.3rem; 
+
+    }
     #contact .contact__infor-address{ 
 
         max-width: 40.4rem;  

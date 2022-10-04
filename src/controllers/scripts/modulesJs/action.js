@@ -48,8 +48,9 @@ function CloseMenu(){
 function onScroll(){  
 
     changeStyleNavonScroll()
+    InitializeActive()
     window.addEventListener('scroll',() => { 
-
+    
         changeStyleNavonScroll()
         changedStyleLinkonScroll(calltoAction); 
         changedStyleLinkonScroll(about); 
@@ -80,16 +81,17 @@ function dataActiveMenu(Container){
 
 function changedStyleLinkonScroll(section) {  
 
-    let data = dataActiveMenu(section) 
+    let data = dataActiveMenu(section)  
 
     const {targetLine, top, bottom} = data; 
     const {id} = section; 
     
-    
+    InitializeActive()
 
      if(targetLine >= top && targetLine < bottom){ 
 
-         document.querySelector(`a[href="${"#" + id}"]`).classList.add('active');
+         document.querySelector(`a[href="${"#" + id}"]`).classList.add('active'); 
+        
 
      }else if(targetLine > bottom){ 
 
@@ -106,7 +108,19 @@ function changedStyleLinkonScroll(section) {
 
 }
 
+ 
+function InitializeActive(){ 
+   
+    if(scrollY == 0){ 
 
+        document.querySelector(`a[href="#calltoAction"]`).classList.add('activeTwo')  
+        document.querySelector(`a[href="#calltoAction"]`).classList.remove('active')  
+
+    }else{ 
+        document.querySelector(`a[href="#calltoAction"]`).classList.remove('activeTwo') 
+    }
+
+}
 
 
 
@@ -146,5 +160,12 @@ function CreateElement(cards){
     })
     
 }
+
+
+function Slider(){ 
+
+    
+
+} 
 
 
