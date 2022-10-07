@@ -9,13 +9,23 @@
     padding-right: 7rem; 
     text-align: left;  
     margin-bottom: 6rem; 
-} 
+}  
+
+#depositions .depositions__comments-container{ 
+ 
+    overflow: hidden; 
+
+}
+
+
 
 #depositions .depositions__comments{ 
 
     padding: 2.8rem 3.2rem;  
     display: flex;  
-    gap: 5.7rem; 
+    gap: 5.7rem;  
+   
+    
 } 
 
 
@@ -67,7 +77,13 @@
         margin-bottom: 6rem;  
         max-width: 48.1rem;  
         margin: 0 auto ; 
-    } 
+    }  
+
+    #depositions .wrapper, 
+    #depositions .wrapper-content{ 
+
+        padding: 0; 
+    }
 
    
     #depositions .depositions__comments{ 
