@@ -4,15 +4,7 @@ import {cards} from '../scripts/modulesJs/createEl.mjs';
 
 ActionsMenu(cards) 
 
-function State(){ 
 
-    return { 
-       
-        stateInitial: 0, 
-
-
-    }
-}
 
 
 function SetListeners(){ 
@@ -28,37 +20,36 @@ function Slider(){return document.querySelector('[data-slide="slider"]');}
  
 let state = { 
 
-    stateInitial:  0 
+    stateInitial:  0, 
+    lastposition: 0, 
+    currentSlideposition: 0, 
+
 }
 
 function onMouseDown(e){ 
- 
-    
+   
     state.stateInitial = e.clientX 
-
+    state.currentSlideposition = e.clientX - state.lastposition; 
     e.currentTarget.addEventListener('mousemove', onMouseMove)  
-    
-
 }
 function SlideItem(position, item ){ 
- 
-    item.style.transform = `translateX(${position}px)`
-
- 
+    state.lastposition = position; 
+    item.style.transform = `translateX(${position}px)` 
 }
 function onMouseMove(e){ 
-    console.log('Não estou ativando')
-    const {stateInitial} = state; 
-    SlideItem(stateInitial - e.clientX, e.currentTarget)
-
+    
+     
+    SlideItem(e.clientX - state.currentSlideposition, e.currentTarget); 
+    
 }
-function onMouseUp(e){ 
+function onMouseUp(e){   
     e.currentTarget.removeEventListener('mousemove', onMouseMove); 
 }
-function onMouseLeave(e){ 
+function onMouseLeave(e){  
     e.currentTarget.removeEventListener('mousemove', onMouseMove); 
 }
 function DragStart(e){ 
+   
     e.preventDefault();   
     console.log('Ativei')
 } 
