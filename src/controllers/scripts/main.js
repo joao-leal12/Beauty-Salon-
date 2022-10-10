@@ -33,17 +33,40 @@ function onMouseDown(e){
     e.currentTarget.addEventListener('mousemove', onMouseMove)  
 }
 function SlideItem(position, item ){ 
-    state.lastposition = position; 
-    item.style.transform = `translateX(${position}px)` 
+    state.lastposition = position;
+   
+
+    item.currentTarget.style.transition = '100ms'
+    item.currentTarget.style.transform = `translateX(${position}px)` 
 }
 function onMouseMove(e){ 
+    let position; 
+    if(e.clientX - state.currentSlideposition > -567 && e.clientX - state.currentSlideposition < 5){ 
+     position = e.clientX - state.currentSlideposition; 
     
+    }else if(e.clientX - state.currentSlideposition > 5){ 
+
+        position = 5 ;  
+
+    }else { 
+        position = -567; 
+    }
      
-    SlideItem(e.clientX - state.currentSlideposition, e.currentTarget); 
+  
+    SlideItem(position, e); 
     
 }
-function onMouseUp(e){   
+function onMouseUp(e){  
+   
     e.currentTarget.removeEventListener('mousemove', onMouseMove); 
+    if(e.clientX != state.stateInitial && e.clientX - state.currentSlideposition > -567 && e.clientX - state.currentSlideposition < 5 ){ 
+            
+        SlideItem(-567, e)
+
+    }else if(e.clientX != state.stateInitial && e.clientX - state.currentSlideposition <= -567){ 
+
+        SlideItem(5, e); 
+    }
 }
 function onMouseLeave(e){  
     e.currentTarget.removeEventListener('mousemove', onMouseMove); 
@@ -51,7 +74,6 @@ function onMouseLeave(e){
 function DragStart(e){ 
    
     e.preventDefault();   
-    console.log('Ativei')
 } 
 
 
