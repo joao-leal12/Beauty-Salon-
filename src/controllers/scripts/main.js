@@ -40,30 +40,34 @@ function SlideItem(position, item ){
     item.currentTarget.style.transform = `translateX(${position}px)` 
 }
 function onMouseMove(e){ 
-    let position; 
+    let position;  
+    
     if(e.clientX - state.currentSlideposition > -567 && e.clientX - state.currentSlideposition < 5){ 
      position = e.clientX - state.currentSlideposition; 
+     SlideItem(position, e); 
     
     }else if(e.clientX - state.currentSlideposition > 5){ 
 
-        position = 5 ;  
+        position = 100;  
+        SlideItem(position, e); 
 
     }else { 
-        position = -567; 
+        position = -800; 
+        SlideItem(position, e); 
     }
-     
-  
-    SlideItem(position, e); 
+
     
 }
 function onMouseUp(e){  
-   
-    e.currentTarget.removeEventListener('mousemove', onMouseMove); 
-    if(e.clientX != state.stateInitial && e.clientX - state.currentSlideposition > -567 && e.clientX - state.currentSlideposition < 5 ){ 
-            
+   let validation = e.clientX - state.currentSlideposition; 
+   let valueState = e.clientX != state.stateInitial; 
+   e.currentTarget.removeEventListener('mousemove', onMouseMove);
+     
+    if(valueState && validation <= -567 ||  validation >= -567 &&  validation <= 5 ){ 
+
         SlideItem(-567, e)
 
-    }else if(e.clientX != state.stateInitial && e.clientX - state.currentSlideposition <= -567){ 
+    }else if(valueState && validation >= 5 || validation < 5 && validation > -567){ 
 
         SlideItem(5, e); 
     }
