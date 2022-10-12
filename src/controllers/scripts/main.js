@@ -32,45 +32,38 @@ function onMouseDown(e){
     state.currentSlideposition = e.clientX - state.lastposition; 
     e.currentTarget.addEventListener('mousemove', onMouseMove)  
 }
-function SlideItem(position, item ){ 
+function SlideItem(position, item, transition ){ 
     state.lastposition = position;
    
 
-    item.currentTarget.style.transition = '100ms'
+     item.currentTarget.style.transition = `${transition}ms`
     item.currentTarget.style.transform = `translateX(${position}px)` 
 }
 function onMouseMove(e){ 
     let position;  
-    
-    if(e.clientX - state.currentSlideposition > -567 && e.clientX - state.currentSlideposition < 5){ 
-     position = e.clientX - state.currentSlideposition; 
-     SlideItem(position, e); 
-    
-    }else if(e.clientX - state.currentSlideposition > 5){ 
-
-        position = 100;  
-        SlideItem(position, e); 
-
-    }else { 
-        position = -800; 
-        SlideItem(position, e); 
+    let validation = e.clientX - state.currentSlideposition
+    console.log(e.clientX - state.currentSlideposition); 
+     if(validation > -800 && validation < 100){ 
+      position = e.clientX - state.currentSlideposition; 
+      SlideItem(position, e,0);   
     }
 
-    
+   
 }
 function onMouseUp(e){  
    let validation = e.clientX - state.currentSlideposition; 
    let valueState = e.clientX != state.stateInitial; 
    e.currentTarget.removeEventListener('mousemove', onMouseMove);
-     
-    if(valueState && validation <= -567 ||  validation >= -567 &&  validation <= 5 ){ 
 
-        SlideItem(-567, e)
+   if(validation < -567){
 
-    }else if(valueState && validation >= 5 || validation < 5 && validation > -567){ 
+     SlideItem(-567, e, 100)
 
-        SlideItem(5, e); 
-    }
+   }else if(validation > 5){ 
+    
+        SlideItem(5, e, 100)
+   }
+
 }
 function onMouseLeave(e){  
     e.currentTarget.removeEventListener('mousemove', onMouseMove); 
