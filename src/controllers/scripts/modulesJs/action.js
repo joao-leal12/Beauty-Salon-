@@ -1,5 +1,6 @@
-
-
+import elements from './Listeners.js';  
+ 
+ 
 
 export function ActionsMenu(cards){ 
     
@@ -7,7 +8,7 @@ export function ActionsMenu(cards){
     closeMenuOnClick() ; 
     CreateElement(cards);   
     onScroll();   
-
+    
 } 
 
 
@@ -161,11 +162,71 @@ function CreateElement(cards){
     
 }
 
+export const SliderAction  = { 
 
-function Slider(){ 
+    start() { 
+        
+        elements.Get.call(this); 
+        
+        elements.State.call(this); 
+        
+        elements.Listeners.call(this); 
+         
+        
+    }, 
+    onMouseDown(e){ 
+    
+        this.stateInitial = e.clientX 
+        this.currentSlideposition = e.clientX - this.lastposition; 
+        e.currentTarget.addEventListener('mousemove', this.onMouseMove)  
+    },
+    SlideItem(position, item, transition ){ 
+        this.lastposition = position; 
+        item.currentTarget.style.transition = `${transition}ms`
+        item.currentTarget.style.transform = `translateX(${position}px)` 
+    },
+    onMouseMove(e){ 
+        let position;  
+        let validation = e.clientX - this.currentSlideposition
+
+        if(validation > -800 && validation < 100){ 
+        position = e.clientX - this.currentSlideposition; 
+            this.SlideItem(position, e,0);   
+        }
 
     
+    },
+    onMouseUp(e){  
+    let validation = e.clientX - this.currentSlideposition;  
+        this.stateMoveUp  = this.stateMoveUp == -567? 5 : -567;  
+    if(validation < -567){
+            position == position == null? -567 : position; 
+        this.SlideItem(-567, e, 100)
+        
+        }else if(validation > 5){ 
+            
+            this.SlideItem(5, e, 100)
+        }else if(validation < 5 && validation > -567){ 
+            
+            
+            this.SlideItem(this.stateMoveUp, e, 100)   
+        
+        }
+    
 
-} 
+        e.currentTarget.removeEventListener('mousemove', this.onMouseMove);
 
+    },
+     onMouseLeave(e){  
+        e.currentTarget.removeEventListener('mousemove', this.onMouseMove); 
+    },
+     DragStart(e){ 
+    
+        e.preventDefault();   
+    } 
+
+
+}
+
+ 
 
