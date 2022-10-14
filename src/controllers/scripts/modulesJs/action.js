@@ -164,21 +164,22 @@ function CreateElement(cards){
 
 export const SliderAction  = { 
 
+   
     start() { 
         
         elements.Get.call(this); 
         
-        elements.State.call(this); 
         
         elements.Listeners.call(this); 
-         
         
+        elements.State.call(this); 
     }, 
-    onMouseDown(e){ 
-    
+    onMouseDown(e){    
+        
         this.stateInitial = e.clientX 
-        this.currentSlideposition = e.clientX - this.lastposition; 
-        e.currentTarget.addEventListener('mousemove', this.onMouseMove)  
+        this.currentSlideposition = e.clientX - this.lastposition;  
+       
+        e.currentTarget.addEventListener('mousemove', this.onMouseMove) 
     },
     SlideItem(position, item, transition ){ 
         this.lastposition = position; 
@@ -187,11 +188,13 @@ export const SliderAction  = {
     },
     onMouseMove(e){ 
         let position;  
-        let validation = e.clientX - this.currentSlideposition
-
+        let validation = e.clientX - this.currentSlideposition 
+        console.log(this.currentSlideposition );
         if(validation > -800 && validation < 100){ 
-        position = e.clientX - this.currentSlideposition; 
+            console.log('Entrei aqui')
+            position = e.clientX - this.currentSlideposition; 
             this.SlideItem(position, e,0);   
+        
         }
 
     

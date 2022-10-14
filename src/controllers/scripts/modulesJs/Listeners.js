@@ -2,11 +2,14 @@
 export default{  
     
     State() { 
-        this.stateInitial=  0; 
-        this.lastposition= 0; 
-        this.currentSlideposition = 0; 
-        this.stateMoveUp= -567;
-  
+       
+           
+           this.stateInitial=  0; 
+           this.lastposition= 0; 
+           this.currentSlideposition = 0; 
+           this.stateMoveUp= -567;
+     
+       
 
     },
 
@@ -15,7 +18,8 @@ export default{
 
     },  
     Listeners(){ 
-        this.slider.onmousedown = (e) => this.onMouseDown(e); 
+        console.log(this.currentSlideposition); 
+        this.slider.onmousedown = (e) => this.onMouseDown(e);  
         this.slider.onmouseup = (e) => this.onMouseUp(e); 
         this.slider.onmouseleave = (e) => this.onMouseLeave(e); 
         this.slider.dragstart = (e) => this.DragStart(e); 
