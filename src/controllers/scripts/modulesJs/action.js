@@ -164,32 +164,32 @@ function CreateElement(cards){
 
 export const SliderAction  = { 
 
-   
     start() { 
         
-        elements.Get.call(this); 
+       
+
         
-        
-        elements.Listeners.call(this); 
-        
-        elements.State.call(this); 
     }, 
     onMouseDown(e){    
         
+        
         this.stateInitial = e.clientX 
-        this.currentSlideposition = e.clientX - this.lastposition;  
-       
-        e.currentTarget.addEventListener('mousemove', this.onMouseMove) 
+        this.currentSlideposition = e.clientX - this.lastposition;   
+     
+
+         e.currentTarget.addEventListener('mousemove', this.onMouseMove) 
     },
     SlideItem(position, item, transition ){ 
         this.lastposition = position; 
         item.currentTarget.style.transition = `${transition}ms`
         item.currentTarget.style.transform = `translateX(${position}px)` 
     },
-    onMouseMove(e){ 
+    onMouseMove(e) { 
+  
+    
         let position;  
         let validation = e.clientX - this.currentSlideposition 
-        console.log(this.currentSlideposition );
+        
         if(validation > -800 && validation < 100){ 
             console.log('Entrei aqui')
             position = e.clientX - this.currentSlideposition; 
@@ -200,7 +200,8 @@ export const SliderAction  = {
     
     },
     onMouseUp(e){  
-    let validation = e.clientX - this.currentSlideposition;  
+      
+    let validation = e.clientX - this.currentSlideposition;   
         this.stateMoveUp  = this.stateMoveUp == -567? 5 : -567;  
     if(validation < -567){
             position == position == null? -567 : position; 
