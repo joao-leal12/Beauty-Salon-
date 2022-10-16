@@ -51,7 +51,9 @@ main{
 
     padding-top: calc(3.2rem + 7.5rem) ; 
 
-} 
+}  
+
+
 
 img{ 
     width: 100%;   
@@ -81,6 +83,18 @@ img{
     background-color: #FFA724; 
 } 
 
+.hideSection{ 
+    
+    opacity: 0;    
+    transform: translateX(-20px); 
+} 
+
+.showSection{ 
+    transition: 1s; 
+    transform: translateX(initial)
+    opacity: 1; 
+
+}
 @media only screen and (min-width: 1100px){ 
 
     .wrapper{  
@@ -91,11 +105,4 @@ img{
         overflow: visible; 
          
     }
-
-
-    
-
-
-    
-
 }
