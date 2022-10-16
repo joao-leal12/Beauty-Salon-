@@ -38,23 +38,22 @@ let state = {
      function onMouseMove(e){ 
          let position;  
          let validation = e.clientX - state.currentSlideposition
-
+            
          if(validation > -800 && validation < 100){ 
-         position = e.clientX - state.currentSlideposition; 
+         position = e.clientX - state.currentSlideposition;  
          SlideItem(position, e,0);   
          }
 
 
      }
      function onMouseUp(e){  
+         e.currentTarget.removeEventListener('mousemove', onMouseMove);
        
          let validation = e.clientX - state.currentSlideposition;  
              state.stateMoveUp  = state.stateMoveUp == -567? 5 : -567
 
-
-             console.log(validation); 
          if(validation < -567){
-                 position == position == null? -567 : position; 
+            
              SlideItem(-567, e, 100)
             
              }else if(validation > 5){ 
@@ -62,15 +61,10 @@ let state = {
                  SlideItem(5, e, 100)
              }else if(validation < 5 && validation > -567){ 
                 
-                
                  SlideItem(state.stateMoveUp, e, 100)   
             
              }
 
-             console.log(validation)
-
-
-             e.currentTarget.removeEventListener('mousemove', onMouseMove);
 
      }
      function onMouseLeave(e){  
