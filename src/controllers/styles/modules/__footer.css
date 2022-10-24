@@ -6,6 +6,8 @@ footer{
     
 
 }  
+ 
+
 
 footer .wrapper{ 
     margin: 0; 
@@ -59,7 +61,7 @@ footer .wrapper-content .footer__social__links li{
     }
 
     footer .wrapper-content  p{ 
-        
+        margin-top: 2.4rem; 
         grid-column: 1/2; 
         font-size: 1.6rem; 
     } 
@@ -72,5 +74,5 @@ footer .wrapper-content .footer__social__links li{
         
     }
 
-  
+   
 }
