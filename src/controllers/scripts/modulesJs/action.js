@@ -1,10 +1,4 @@
 
-
-
- 
-
-
-
 function ActiveMenuOnClick(){ 
 
     const BtnOpen = document.querySelector('[data-open]')

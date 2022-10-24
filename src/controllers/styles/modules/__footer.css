@@ -2,7 +2,7 @@ footer{
 
     padding: 6.4rem 2.4rem;  
     background-color:#FFA724 ; 
-    display: flex ;
+   
     
 
 }  
@@ -28,4 +28,49 @@ footer .footer__social__links{
 
 
 
+} 
+
+footer .wrapper-content .footer__social__links li{ 
+
+    cursor: pointer; 
+
+}
+
+ 
+@media only screen and (min-width: 1100px){ 
+
+    footer{ 
+        padding-inline: 12.3rem; 
+    }
+    footer .wrapper-content{ 
+      
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);  
+        align-content: center;  
+
+        padding: 0; 
+    }  
+
+    footer .wrapper-content .nav__logo{ 
+
+        grid-column: 1/2;   
+        text-align: left; 
+
+    }
+
+    footer .wrapper-content  p{ 
+        
+        grid-column: 1/2; 
+        font-size: 1.6rem; 
+    } 
+
+    footer .wrapper-content .footer__social__links { 
+    
+        justify-content: flex-end;   
+        grid-column: 3/4; 
+        margin: 0; 
+        
+    }
+
+  
 }
